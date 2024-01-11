@@ -18,6 +18,7 @@ void WheelController::init(pin_size_t flPin1, pin_size_t flPin2, pin_size_t frPi
     pinMode(blPin2, OUTPUT);
     pinMode(brPin2, OUTPUT);
     pinMode(brPin1, OUTPUT);
+    setSpeed(0.f, 0.f, 0.f);
 }
 
 void WheelController::setSpeed(float frontBias, float rightBias, float clockwiseBias, float factor) {

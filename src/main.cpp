@@ -1,13 +1,16 @@
 #include <Arduino.h>
 
 #include "WheelController.hpp"
+#include "DroneNetworkManager.hpp"
 
 WheelController wheelController;
+DroneNetworkManager wifi;
 
 void setup() {
-    wheelController.init(8, 9, 10, 11, 12, 13, 14, 15);
+    Serial.begin(115200);
+    wifi.init("NVSpot", "nwex1463");
 }
 
 void loop() {
-    
+    wifi.tick();
 }
